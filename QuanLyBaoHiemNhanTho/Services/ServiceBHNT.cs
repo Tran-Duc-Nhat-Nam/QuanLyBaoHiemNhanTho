@@ -10,7 +10,7 @@ namespace QuanLyBaoHiemNhanTho.Services
     public class ServiceBHNT
     {
         private static string connectionString = "mongodb+srv://tranducnhatnam27:FmY2PQOeg4PEjWnp@cluster0.r7r0dc8.mongodb.net/";
-        private static string databaseName = "nam_db";
+        private static string databaseName = "BaoHiem";
 
         protected static IMongoCollection<T> GetCollection<T>(string collectionName)
         {

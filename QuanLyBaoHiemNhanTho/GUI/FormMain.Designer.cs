@@ -39,7 +39,7 @@
             // menuStrip1
             // 
             menuStrip1.AutoSize = false;
-            menuStrip1.BackColor = Color.DodgerBlue;
+            menuStrip1.BackColor = SystemColors.Control;
             menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo, tstbTimKiem });
             menuStrip1.Location = new Point(0, 0);
@@ -50,6 +50,7 @@
             // 
             // smiHoSo
             // 
+            smiHoSo.BackColor = Color.LightCyan;
             smiHoSo.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             smiHoSo.ForeColor = Color.White;
             smiHoSo.Name = "smiHoSo";

@@ -10,16 +10,16 @@ namespace QuanLyBaoHiemNhanTho.Services
 {
     public class ServiceTaiKhoan : ServiceBHNT
     {
-        public async Task<NhanVien> KiemTraTaiKhoan(string cccd, string mk)
+        public NhanVien? KiemTraTaiKhoan(string cccd, string mk)
         {
-            IMongoCollection<HopDong> collection = GetCollection<HopDong>("HopDong");
-            IAsyncCursor<HopDong> result = await collection
-                .FindAsync(hd => hd.NhanVien.CCCD == cccd && hd.NhanVien.MatKhau == mk);
+            IAsyncCursor<NhanVien> result = GetCollection<NhanVien>("NhanVien")
+                .FindAsync(nv => nv.CCCD == cccd && nv.MatKhau == mk).Result;
 
-            List<HopDong> dsHD = result.ToList();
+            List<NhanVien> dsHD = result.ToList();
+
             if (dsHD.Count > 0)
             {
-                return dsHD[0].NhanVien;
+                return dsHD[0];
             }
             else
             {
@@ -27,15 +27,22 @@ namespace QuanLyBaoHiemNhanTho.Services
             }
         }
 
-        public Task CapNhatTaiKhoan(string cccd, string mk)
+        public void CapNhatTaiKhoan(string cccd, string mk)
         {
-            var filter = Builders<HopDong>.Filter
+            var filter = Builders<NhanVien>.Filter
+                .Eq(e => e.CCCD, cccd);
+            var update = Builders<NhanVien>.Update
+                .Set(e => e.MatKhau, mk);
+
+            GetCollection<NhanVien>("NhanVien").UpdateOne(filter, update);
+
+
+            var filterHD = Builders<HopDong>.Filter
                 .Eq(e => e.NhanVien.CCCD, cccd);
-            var update = Builders<HopDong>.Update
+            var updateHD = Builders<HopDong>.Update
                 .Set(e => e.NhanVien.MatKhau, mk);
 
-            IMongoCollection<HopDong> collection = GetCollection<HopDong>("HopDong");
-            return collection.UpdateOneAsync(filter, update);
+            GetCollection<HopDong>("HopDong").UpdateMany(filterHD, updateHD);
         }
     }
 }

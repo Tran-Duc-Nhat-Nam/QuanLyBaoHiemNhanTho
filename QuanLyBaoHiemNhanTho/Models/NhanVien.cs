@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.IdGenerators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +11,9 @@ namespace QuanLyBaoHiemNhanTho.Models
 {
     public class NhanVien
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id { get; set; }
         public string HoTen { get; set; }
         public string CCCD { get; set; }
         public string GioiTinh { get; set; }
