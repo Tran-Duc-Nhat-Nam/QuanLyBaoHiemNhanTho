@@ -12,14 +12,13 @@ namespace QuanLyBaoHiemNhanTho.Models
     public class NhanVien
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string _id { get; set; }
         public string HoTen { get; set; }
         public string CCCD { get; set; }
         public string GioiTinh { get; set; }
         public string QuocTich { get; set; }
         public DateTime NgaySinh { get; set; }
-        public DateTime NgayVaoLam { get; set; }
+        public string TrangThai { get; set; }
         public DiaChi DiaChi { get; set; }
         public string Email { get; set; }
         public string SDT { get; set; }

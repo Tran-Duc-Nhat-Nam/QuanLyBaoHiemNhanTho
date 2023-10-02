@@ -10,10 +10,10 @@ namespace QuanLyBaoHiemNhanTho.Services
 {
     public class ServiceTaiKhoan : ServiceBHNT
     {
-        public NhanVien? KiemTraTaiKhoan(string cccd, string mk)
+        public NhanVien? KiemTraTaiKhoan(string id, string mk)
         {
             IAsyncCursor<NhanVien> result = GetCollection<NhanVien>("NhanVien")
-                .FindAsync(nv => nv.CCCD == cccd && nv.MatKhau == mk).Result;
+                .FindAsync(nv => nv._id == id && nv.MatKhau == mk).Result;
 
             List<NhanVien> dsHD = result.ToList();
 
@@ -27,10 +27,10 @@ namespace QuanLyBaoHiemNhanTho.Services
             }
         }
 
-        public void CapNhatTaiKhoan(string cccd, string mk)
+        public void CapNhatTaiKhoan(string id, string mk)
         {
             var filter = Builders<NhanVien>.Filter
-                .Eq(e => e.CCCD, cccd);
+                .Eq(e => e._id, id);
             var update = Builders<NhanVien>.Update
                 .Set(e => e.MatKhau, mk);
 
@@ -38,7 +38,7 @@ namespace QuanLyBaoHiemNhanTho.Services
 
 
             var filterHD = Builders<HopDong>.Filter
-                .Eq(e => e.NhanVien.CCCD, cccd);
+                .Eq(e => e.NhanVien._id, id);
             var updateHD = Builders<HopDong>.Update
                 .Set(e => e.NhanVien.MatKhau, mk);
 

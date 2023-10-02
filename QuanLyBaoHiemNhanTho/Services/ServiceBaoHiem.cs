@@ -15,8 +15,9 @@ namespace QuanLyBaoHiemNhanTho.Services
         public async Task<List<HopDong>> XemHopDong(string text)
         {
             return GetCollection<HopDong>("HopDong").Find(
-                                hd => hd.MaHD.Contains(text) || hd.LoaiHD.Contains(text) ||
+                                hd => hd.MaHD.Contains(text) || hd.LoaiHD.TenLHD.Contains(text) ||
                                 hd.KhachHang.HoTen.Contains(text) || hd.KhachHang.CCCD.Contains(text) ||
+                                hd.KhachHang._id.Contains(text) || hd.NhanVien._id.Contains(text) ||
                                 hd.NhanVien.HoTen.Contains(text) || hd.NhanVien.CCCD.Contains(text)).ToList();
         }
     }

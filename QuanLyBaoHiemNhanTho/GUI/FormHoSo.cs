@@ -28,7 +28,7 @@ namespace QuanLyBaoHiemNhanTho.GUI
             txtDiaChi.Text = nv.DiaChi.ToString();
             txtEmail.Text = nv.Email;
             txtSDT.Text = nv.SDT;
-            txtNgayVaoLam.Text = nv.NgayVaoLam.ToShortDateString();
+            txttrangThai.Text = nv.TrangThai;
             txtMatKhau.Text = nv.MatKhau;
         }
 

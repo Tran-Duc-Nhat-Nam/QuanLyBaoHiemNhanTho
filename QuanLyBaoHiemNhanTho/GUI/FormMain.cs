@@ -21,8 +21,14 @@ namespace QuanLyBaoHiemNhanTho.GUI
             InitializeComponent();
 
             this.nv = nv;
+            this.FormClosed += FormMain_FormClosed;
 
             smiHoSo.Click += SmiHoSo_Click;
+        }
+
+        private void FormMain_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(69);
         }
 
         private void SmiHoSo_Click(object? sender, EventArgs e)
@@ -46,7 +52,11 @@ namespace QuanLyBaoHiemNhanTho.GUI
             if (e.KeyChar == (char)Keys.Enter)
             {
                 List<HopDong> dsHD = new ServiceBaoHiem().XemHopDong(tstbTimKiem.Text).Result;
-                MessageBox.Show(dsHD.Count.ToString());
+                
+                foreach (HopDong hd in dsHD)
+                {
+                    MessageBox.Show(hd.ToString());
+                }
             }
         }
     }

@@ -11,10 +11,9 @@ namespace QuanLyBaoHiemNhanTho.Models
     public class HopDong
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
         public string _id { get; set; }
         public string MaHD { get; set; }
-        public string LoaiHD { get; set; }
+        public LoaiHD LoaiHD { get; set; }
         public DateTime NgayLapHD { get; set; }
         public DateTime NgayHetHan { get; set; }
         public long PhiHopDong { get; set; }
@@ -23,5 +22,10 @@ namespace QuanLyBaoHiemNhanTho.Models
         public string TinhTrang { get; set; }
         public KhachHang KhachHang { get; set; }
         public NhanVien NhanVien { get; set; }
+
+        public override string ToString()
+        {
+            return $"{LoaiHD.TenLHD} mã số {_id} của khách hàng {KhachHang.HoTen} được lập ngày {NgayLapHD.ToShortDateString()} bởi nhân viên {NhanVien._id}";
+        }
     }
 }

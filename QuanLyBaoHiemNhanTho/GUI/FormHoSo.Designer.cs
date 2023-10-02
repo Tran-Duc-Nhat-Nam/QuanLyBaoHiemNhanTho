@@ -37,7 +37,7 @@
             txtSDT = new Krypton.Toolkit.KryptonTextBox();
             txtEmail = new Krypton.Toolkit.KryptonTextBox();
             txtMatKhau = new Krypton.Toolkit.KryptonTextBox();
-            txtNgayVaoLam = new Krypton.Toolkit.KryptonTextBox();
+            txttrangThai = new Krypton.Toolkit.KryptonTextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             label2 = new Label();
             label3 = new Label();
@@ -183,20 +183,20 @@
             txtMatKhau.TabIndex = 14;
             txtMatKhau.Text = "kryptonTextBox9";
             // 
-            // txtNgayVaoLam
+            // txttrangThai
             // 
-            txtNgayVaoLam.Dock = DockStyle.Fill;
-            txtNgayVaoLam.Location = new Point(164, 485);
-            txtNgayVaoLam.Margin = new Padding(7);
-            txtNgayVaoLam.Name = "txtNgayVaoLam";
-            txtNgayVaoLam.Size = new Size(538, 39);
-            txtNgayVaoLam.StateCommon.Back.Color1 = Color.White;
-            txtNgayVaoLam.StateCommon.Border.Color1 = Color.DodgerBlue;
-            txtNgayVaoLam.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            txtNgayVaoLam.StateCommon.Border.Rounding = 25F;
-            txtNgayVaoLam.TabIndex = 13;
-            txtNgayVaoLam.Text = "kryptonTextBox10";
-            txtNgayVaoLam.TextChanged += txtNgayVaoLam_TextChanged;
+            txttrangThai.Dock = DockStyle.Fill;
+            txttrangThai.Location = new Point(164, 485);
+            txttrangThai.Margin = new Padding(7);
+            txttrangThai.Name = "txttrangThai";
+            txttrangThai.Size = new Size(538, 39);
+            txttrangThai.StateCommon.Back.Color1 = Color.White;
+            txttrangThai.StateCommon.Border.Color1 = Color.DodgerBlue;
+            txttrangThai.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            txttrangThai.StateCommon.Border.Rounding = 25F;
+            txttrangThai.TabIndex = 13;
+            txttrangThai.Text = "kryptonTextBox10";
+            txttrangThai.TextChanged += txtNgayVaoLam_TextChanged;
             // 
             // tableLayoutPanel1
             // 
@@ -207,7 +207,7 @@
             tableLayoutPanel1.Controls.Add(txtHoTen, 1, 1);
             tableLayoutPanel1.Controls.Add(txtGioiTinh, 1, 2);
             tableLayoutPanel1.Controls.Add(txtNgaySinh, 1, 3);
-            tableLayoutPanel1.Controls.Add(txtNgayVaoLam, 1, 5);
+            tableLayoutPanel1.Controls.Add(txttrangThai, 1, 5);
             tableLayoutPanel1.Controls.Add(txtEmail, 1, 4);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(label3, 0, 2);
@@ -275,7 +275,7 @@
             label6.Name = "label6";
             label6.Size = new Size(151, 50);
             label6.TabIndex = 18;
-            label6.Text = "Ngày vào làm";
+            label6.Text = "Trạng thái";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -415,7 +415,7 @@
         private Krypton.Toolkit.KryptonTextBox txtSDT;
         private Krypton.Toolkit.KryptonTextBox txtEmail;
         private Krypton.Toolkit.KryptonTextBox txtMatKhau;
-        private Krypton.Toolkit.KryptonTextBox txtNgayVaoLam;
+        private Krypton.Toolkit.KryptonTextBox txttrangThai;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,8 @@ namespace QuanLyBaoHiemNhanTho.Models
 {
     public class KhachHang
     {
+        [BsonId]
+        public string _id { get; set; }
         public string HoTen { get; set; }
         public string CCCD { get; set; }
         public string GioiTinh { get; set; }
