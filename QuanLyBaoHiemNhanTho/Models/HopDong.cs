@@ -23,6 +23,13 @@ namespace QuanLyBaoHiemNhanTho.Models
         public KhachHang KhachHang { get; set; }
         public NhanVien NhanVien { get; set; }
 
+        public HopDong()
+        {
+            this.LoaiHD = new LoaiHD();
+            this.KhachHang = new KhachHang();
+            this.NhanVien = new NhanVien();
+        }
+
         public override string ToString()
         {
             return $"{LoaiHD.TenLHD} mã số {_id} của khách hàng {KhachHang.HoTen} được lập ngày {NgayLapHD.ToShortDateString()} bởi nhân viên {NhanVien._id}";

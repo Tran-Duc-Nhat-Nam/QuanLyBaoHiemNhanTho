@@ -6,6 +6,8 @@
   "TrangThai": "Còn làm",
   "GioiTinh": "Nam",
   "QuocTich": "Việt Nam",
+  "SDT": "0366764749",
+  "Email": "toan@gmail.com",
   "NgaySinh": {
     "$date": "1990-05-15T00:00:00.000Z"
   },
@@ -25,6 +27,8 @@
   "TrangThai": "Còn làm",
   "GioiTinh": "Nữ",
   "QuocTich": "Việt Nam",
+  "SDT": "0366764748",
+  "Email": "thuy@gmail.com",
   "NgaySinh": {
     "$date": "1985-08-20T00:00:00.000Z"
   },
@@ -44,6 +48,8 @@
   "TrangThai": "Còn làm",
   "GioiTinh": "Nữ",
   "QuocTich": "Việt Nam",
+  "SDT": "0366764747",
+  "Email": "tam@gmail.com",
   "NgaySinh": {
     "$date": "1998-03-17T00:00:00.000Z"
   },
@@ -63,6 +69,8 @@
   "TrangThai": "Còn làm",
   "GioiTinh": "Nữ",
   "QuocTich": "Việt Nam",
+  "SDT": "0366764746",
+  "Email": "hang@gmail.com",
   "NgaySinh": {
     "$date": "1995-08-25T00:00:00.000Z"
   },

@@ -23,5 +23,10 @@ namespace QuanLyBaoHiemNhanTho.Models
         public string Email { get; set; }
         public string SDT { get; set; }
         public string MatKhau { get; set; }
+
+        public NhanVien()
+        {
+            this.DiaChi = new DiaChi();
+        }
     }
 }

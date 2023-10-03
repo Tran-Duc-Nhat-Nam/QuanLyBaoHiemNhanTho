@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             smiHoSo = new ToolStripMenuItem();
-            tstbTimKiem = new ToolStripTextBox();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -39,12 +38,12 @@
             // menuStrip1
             // 
             menuStrip1.AutoSize = false;
-            menuStrip1.BackColor = SystemColors.Control;
+            menuStrip1.BackColor = Color.White;
             menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo, tstbTimKiem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 35);
+            menuStrip1.Size = new Size(884, 35);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -56,16 +55,6 @@
             smiHoSo.Name = "smiHoSo";
             smiHoSo.Size = new Size(55, 31);
             smiHoSo.Text = "Hồ sơ";
-            // 
-            // tstbTimKiem
-            // 
-            tstbTimKiem.Alignment = ToolStripItemAlignment.Right;
-            tstbTimKiem.BorderStyle = BorderStyle.FixedSingle;
-            tstbTimKiem.Margin = new Padding(1, 0, 3, 0);
-            tstbTimKiem.Name = "tstbTimKiem";
-            tstbTimKiem.Size = new Size(100, 31);
-            tstbTimKiem.KeyPress += tstbTimKiem_KeyPress;
-            tstbTimKiem.Click += tstbTimKiem_Click;
             // 
             // kryptonPalette1
             // 
@@ -90,7 +79,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 255);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(884, 561);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
@@ -107,6 +96,5 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem smiHoSo;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private ToolStripTextBox tstbTimKiem;
     }
 }

@@ -41,23 +41,5 @@ namespace QuanLyBaoHiemNhanTho.GUI
             f.FormBorderStyle = FormBorderStyle.None;
             f.Show();
         }
-
-        private void tstbTimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tstbTimKiem_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                List<HopDong> dsHD = new ServiceBaoHiem().XemHopDong(tstbTimKiem.Text).Result;
-                
-                foreach (HopDong hd in dsHD)
-                {
-                    MessageBox.Show(hd.ToString());
-                }
-            }
-        }
     }
 }
