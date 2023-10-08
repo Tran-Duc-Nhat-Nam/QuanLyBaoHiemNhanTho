@@ -17,39 +17,45 @@
   "PhanTramLoiNhuan": 8.5,
   "TinhTrang": "Còn hiệu lực",
   "KhachHang": {
-    "_id": "KH001",
-    "HoTen": "Trần Đức Nhật Nam",
-    "CCCD": "01234567890",
-    "GioiTinh": "Nam",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1970-01-01T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "29/9",
-      "Duong": "Trần Hữu Trang",
-      "PhuongXa": "Phường 11",
-      "QuanHuyen": "Quận Phú Nhuận",
-      "TinhThanh": "TP.HCM"
-    }
+  "_id": "KH001",
+  "HoTen": "Trần Đức Nhật Nam",
+  "CCCD": "01234567890",
+  "GioiTinh": "Nam",
+  "SDT": "0366764456",
+  "Email": "nam@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date": "2002-07-27 T00:00:00.000Z"
   },
-  "NhanVien": {
-    "_id": "NV001",
-    "HoTen": "Nguyễn Văn Toàn",
-    "CCCD": "123456789",
-    "GioiTinh": "Nam",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1990-05-15T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "25",
-      "Duong": "Lê Lai",
-      "PhuongXa": "Phường Bến Thành",
-      "QuanHuyen": "Quận 1",
-      "TinhThanh": "Thành phố Hồ Chí Minh"
-    }
+  "DiaChi": {
+    "SoNha": "29/9",
+    "Duong": "Trần Hữu Trang",
+    "PhuongXa": "Phường 11",
+    "QuanHuyen": "Quận Phú Nhuận",
+    "TinhThanh": "TP.HCM"
   }
+},
+  "NhanVien": {
+  "_id": "NV001",
+  "HoTen": "Nguyễn Văn Toàn",
+  "CCCD": "123456789",
+  "MatKhau" : "Toan123",
+  "TrangThai": "Còn làm",
+  "GioiTinh": "Nam",
+  "QuocTich": "Việt Nam",
+  "SDT": "0366764749",
+  "Email": "toan@gmail.com",
+  "NgaySinh": {
+    "$date": "1990-05-15T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "25",
+    "Duong": "Lê Lai",
+    "PhuongXa": "Phường Bến Thành",
+    "QuanHuyen": "Quận 1",
+    "TinhThanh": "Thành phố Hồ Chí Minh"
+  }
+}
 },
 {
   "_id": "HD002",
@@ -70,39 +76,45 @@
   "PhanTramLoiNhuan": 10.2,
   "TinhTrang": "Còn hiệu lực",
   "KhachHang": {
-    "_id": "KH002",
-    "HoTen": "Nguyễn Hoàng Tuấn",
-    "CCCD": "0987615243",
-    "GioiTinh": "Nam",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1970-01-01T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "24A",
-      "Duong": "Võ Thi Quận",
-      "PhuongXa": "Tân Phú Trung",
-      "QuanHuyen": "Củ Chi",
-      "TinhThanh": "TP.HCM"
-    }
+  "_id": "KH002",
+  "HoTen": "Nguyễn Hoàng Tuấn",
+  "CCCD": "0987615243",
+  "GioiTinh": "Nam",
+  "SDT": "036691456",
+  "Email": "tuan@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date": "2002-10-14 T00:00:00.000Z"
   },
-  "NhanVien": {
-    "_id": "NV002",
-    "HoTen": "Trần Thị Thúy",
-    "CCCD": "987654321",
-    "GioiTinh": "Nữ",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1985-08-20T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "50",
-      "Duong": "Trần Hưng Đạo",
-      "PhuongXa": "Phường Hải Châu",
-      "QuanHuyen": "Quận Hải Châu",
-      "TinhThanh": "Đà Nẵng"
-    }
+  "DiaChi": {
+    "SoNha": "24A",
+    "Duong": "Võ Thi Quận",
+    "PhuongXa": "Tân Phú Trung",
+    "QuanHuyen": "Củ Chi",
+    "TinhThanh": "TP.HCM"
   }
+},
+  "NhanVien": {
+  "_id": "NV002",
+  "HoTen": "Trần Thị Thúy",
+  "CCCD": "987654321",
+  "MatKhau" : "Thuy123",
+  "TrangThai": "Còn làm",
+  "GioiTinh": "Nữ",
+  "QuocTich": "Việt Nam",
+  "SDT": "0366764748",
+  "Email": "thuy@gmail.com",
+  "NgaySinh": {
+    "$date": "1985-08-20T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "50",
+    "Duong": "Trần Hưng Đạo",
+    "PhuongXa": "Phường Hải Châu",
+    "QuanHuyen": "Quận Hải Châu",
+    "TinhThanh": "Đà Nẵng"
+  }
+}
 },
 {
   "_id": "HD003",
@@ -123,39 +135,45 @@
   "PhanTramLoiNhuan": 9,
   "TinhTrang": "Còn hiệu lực",
   "KhachHang": {
-    "_id": "KH003",
-    "HoTen": "Đoàn Xuấn Tuấn",
-    "CCCD": "0987612343",
-    "GioiTinh": "Nam",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1970-01-01T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "26/9",
-      "Duong": "Võ Thi Hà",
-      "PhuongXa": "Quang Trung",
-      "QuanHuyen": "Nam Định",
-      "TinhThanh": "TP.HCM"
-    }
+  "_id": "KH003",
+  "HoTen": "Đoàn Xuấn Tuấn",
+  "CCCD": "0987612343",
+  "GioiTinh": "Nam",
+  "SDT": "0366017456",
+  "Email": "xtuan@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date":"2002-02-24 T00:00:00.000Z"
   },
-  "NhanVien": {
-    "_id": "NV003",
-    "HoTen": "Lê Thị Tấm",
-    "CCCD": "555555555",
-    "GioiTinh": "Nữ",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1998-03-17T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "15",
-      "Duong": "Nguyễn Du",
-      "PhuongXa": "Phường Đống Đa",
-      "QuanHuyen": "Quận Đống Đa",
-      "TinhThanh": "Hà Nội"
-    }
+  "DiaChi": {
+    "SoNha": "26/9",
+    "Duong": "Võ Thi Hà",
+    "PhuongXa": "Quang Trung",
+    "QuanHuyen": "Nam Định",
+    "TinhThanh": "Nam Định"
   }
+},
+  "NhanVien": {
+  "_id": "NV004",
+  "HoTen": "Nguyễn Thị Hằng",
+  "CCCD": "123456789",
+  "MatKhau" : "Hang123",
+  "TrangThai": "Còn làm",
+  "GioiTinh": "Nữ",
+  "QuocTich": "Việt Nam",
+  "SDT": "0366764746",
+  "Email": "hang@gmail.com",
+  "NgaySinh": {
+    "$date": "1995-08-25T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "42",
+    "Duong": "Nguyễn Đình Chính",
+    "PhuongXa": "Phường Tân Phú",
+    "QuanHuyen": "Quận 7",
+    "TinhThanh": "Thành phố Hồ Chí Minh"
+  }
+}
 },
 {
   "_id": "HD004",
@@ -176,37 +194,43 @@
   "PhanTramLoiNhuan": 8.8,
   "TinhTrang": "Còn hiệu lực",
   "KhachHang": {
-    "_id": "KH004",
-    "HoTen": "Võ Thị Thanh Trúc",
-    "CCCD": "0882612443",
-    "GioiTinh": "Nữ",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1970-01-01T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "26/9",
-      "Duong": "Đường số 6",
-      "PhuongXa": "Bình Hưng Hòa B",
-      "QuanHuyen": "Bình Tân",
-      "TinhThanh": "TP.HCM"
-    }
+  "_id": "KH004",
+  "HoTen": "Lê Bùi Tấn Trưởng",
+  "CCCD": "0882612443",
+  "GioiTinh": "Nam",
+  "SDT": "0652764456",
+  "Email": "truong@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date":"2002-28-01 T00:00:00.000Z"
   },
-  "NhanVien": {
-    "_id": "NV004",
-    "HoTen": "Nguyễn Thị Hằng",
-    "CCCD": "123456789",
-    "GioiTinh": "Nữ",
-    "QuocTich": "Việt Nam",
-    "NgaySinh": {
-      "$date": "1995-08-25T00:00:00.000Z"
-    },
-    "DiaChi": {
-      "SoNha": "42",
-      "Duong": "Nguyễn Đình Chính",
-      "PhuongXa": "Phường Tân Phú",
-      "QuanHuyen": "Quận 7",
-      "TinhThanh": "Thành phố Hồ Chí Minh"
-    }
+  "DiaChi": {
+    "SoNha": "26/9",
+    "Duong": "Võ Thi Hà",
+    "PhuongXa": "Quang Trung",
+    "QuanHuyen": "Hoài Nhơn",
+    "TinhThanh": "Bình Định"
   }
+},
+  "NhanVien":{
+  "_id": "NV001",
+  "HoTen": "Nguyễn Văn Toàn",
+  "CCCD": "123456789",
+  "MatKhau" : "Toan123",
+  "TrangThai": "Còn làm",
+  "GioiTinh": "Nam",
+  "QuocTich": "Việt Nam",
+  "SDT": "0366764749",
+  "Email": "toan@gmail.com",
+  "NgaySinh": {
+    "$date": "1990-05-15T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "25",
+    "Duong": "Lê Lai",
+    "PhuongXa": "Phường Bến Thành",
+    "QuanHuyen": "Quận 1",
+    "TinhThanh": "Thành phố Hồ Chí Minh"
+  }
+}
 }]

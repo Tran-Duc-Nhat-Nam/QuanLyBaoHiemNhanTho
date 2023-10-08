@@ -23,7 +23,8 @@ namespace QuanLyBaoHiemNhanTho
         {
             InitializeComponent();
             cbb_gioiTinh.Items.AddRange(new string[] { "Nam", "Nữ" });
-
+            txt_maKH.Text = maKhachHang();
+            txt_maKH.Enabled = false;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -43,8 +44,8 @@ namespace QuanLyBaoHiemNhanTho
 
             DiaChi diaChi = new DiaChi(txt_soNha.Text, txt_soDuong.Text, txt_phuongXa.Text, txt_quanHuyen.Text, txt_tinhThanh.Text); ;
             KhachHang kh = new KhachHang(txt_maKH.Text, txt_tenKH.Text, txt_CCCD.Text, txt_SDT.Text, txt_email.Text, cbb_gioiTinh.Text, txt_quocTich.Text, ngay, diaChi);
-            
-            if(!khDB.checkID(txt_maKH.Text))
+
+            if (!khDB.checkID(txt_maKH.Text))
             {
                 txt_maKH.Clear();
                 MessageBox.Show("Mã nhận viên đã tồn tại, xin nhận lại!");
@@ -53,12 +54,42 @@ namespace QuanLyBaoHiemNhanTho
             else
             {
                 khDB.createKhachHang(kh);
-                Program.mainKH.loadData();
-                Program.mainKH.Show();
+                this.Dispose();
             }
         }
-            
 
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
 
+        }
+
+        
+
+        private void number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự là số (0-9) hoặc ký tự Backspace
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Loại bỏ ký tự không hợp lệ
+            }
+        }
+
+        // Hiện mã khách hàng lên text box
+        public string maKhachHang()
+        {
+            int t = 1;
+            string maso = "KH" + t.ToString("000");
+            List<KhachHang> lkh = khDB.DsKhachHang();
+            foreach(KhachHang k in lkh)
+            {
+                if(maso != k.Id) {
+                    return maso;
+                }
+                t++;
+                maso = "KH" + t.ToString("000");
+            }
+            return maso;
+        }
     }
 }

@@ -33,6 +33,25 @@ namespace QuanLyBaoHiemNhanTho.GUI
 
             smiHoSo.Click += SmiHoSo_Click;
             smiKhachHang.Click += SmiKhachHang_Click;
+            smiThongKe.Click += SmiThongKe_Click;
+            smiNhanVien.Click += SmiNhanVien_Click;
+        }
+
+        private void SmiNhanVien_Click(object? sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+            FormNhanVien f = new FormNhanVien();
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.ShowInTaskbar = false;
+            f.BackColor = Color.White;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Show();
+        }
+
+        private void SmiThongKe_Click(object? sender, EventArgs e)
+        {
+            // Thêm gọi form thống kê
         }
 
         private void SmiKhachHang_Click(object? sender, EventArgs e)
@@ -62,6 +81,11 @@ namespace QuanLyBaoHiemNhanTho.GUI
             f.BackColor = Color.White;
             f.FormBorderStyle = FormBorderStyle.None;
             f.Show();
+        }
+
+        private void thốngKệToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

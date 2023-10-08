@@ -1,0 +1,77 @@
+[{
+  "_id": "KH001",
+  "HoTen": "Trần Đức Nhật Nam",
+  "CCCD": "01234567890",
+  "GioiTinh": "Nam",
+  "SDT": "0366764456",
+  "Email": "nam@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date": "2002-07-27 T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "29/9",
+    "Duong": "Trần Hữu Trang",
+    "PhuongXa": "Phường 11",
+    "QuanHuyen": "Quận Phú Nhuận",
+    "TinhThanh": "TP.HCM"
+  }
+},
+{
+  "_id": "KH002",
+  "HoTen": "Nguyễn Hoàng Tuấn",
+  "CCCD": "0987615243",
+  "GioiTinh": "Nam",
+  "SDT": "036691456",
+  "Email": "tuan@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date": "2002-10-14 T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "24A",
+    "Duong": "Võ Thi Quận",
+    "PhuongXa": "Tân Phú Trung",
+    "QuanHuyen": "Củ Chi",
+    "TinhThanh": "TP.HCM"
+  }
+},
+{
+  "_id": "KH003",
+  "HoTen": "Đoàn Xuấn Tuấn",
+  "CCCD": "0987612343",
+  "GioiTinh": "Nam",
+  "SDT": "0366017456",
+  "Email": "xtuan@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date":"2002-02-24 T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "26/9",
+    "Duong": "Võ Thi Hà",
+    "PhuongXa": "Quang Trung",
+    "QuanHuyen": "Nam Định",
+    "TinhThanh": "Nam Định"
+  }
+},
+{
+  "_id": "KH004",
+  "HoTen": "Lê Bùi Tấn Trưởng",
+  "CCCD": "0882612443",
+  "GioiTinh": "Nam",
+  "SDT": "0652764456",
+  "Email": "truong@gmail.com",
+  "QuocTich": "Việt Nam",
+  "NgaySinh": {
+    "$date":"2002-28-01 T00:00:00.000Z"
+  },
+  "DiaChi": {
+    "SoNha": "26/9",
+    "Duong": "Võ Thi Hà",
+    "PhuongXa": "Quang Trung",
+    "QuanHuyen": "Hoài Nhơn",
+    "TinhThanh": "Bình Định"
+  }
+}
+]

@@ -32,7 +32,9 @@
             menuStrip1 = new MenuStrip();
             smiHoSo = new ToolStripMenuItem();
             smiKhachHang = new ToolStripMenuItem();
+            smiThongKe = new ToolStripMenuItem();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
+            smiNhanVien = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,7 +43,7 @@
             menuStrip1.AutoSize = false;
             menuStrip1.BackColor = Color.White;
             menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo, smiKhachHang });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo, smiKhachHang, smiNhanVien, smiThongKe });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1064, 35);
@@ -63,6 +65,12 @@
             smiKhachHang.Size = new Size(82, 31);
             smiKhachHang.Text = "Khách hàng";
             // 
+            // smiThongKe
+            // 
+            smiThongKe.Name = "smiThongKe";
+            smiThongKe.Size = new Size(68, 31);
+            smiThongKe.Text = "Thống kê";
+            // 
             // kryptonPalette1
             // 
             kryptonPalette1.AllowFormChrome = Krypton.Toolkit.InheritBool.True;
@@ -80,6 +88,12 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color1 = Color.Black;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color2 = Color.Black;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            // 
+            // nhânViênToolStripMenuItem
+            // 
+            smiNhanVien.Name = "nhânViênToolStripMenuItem";
+            smiNhanVien.Size = new Size(73, 31);
+            smiNhanVien.Text = "Nhân viên";
             // 
             // FormMain
             // 
@@ -104,5 +118,7 @@
         private ToolStripMenuItem smiHoSo;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ToolStripMenuItem smiKhachHang;
+        private ToolStripMenuItem smiThongKe;
+        private ToolStripMenuItem smiNhanVien;
     }
 }

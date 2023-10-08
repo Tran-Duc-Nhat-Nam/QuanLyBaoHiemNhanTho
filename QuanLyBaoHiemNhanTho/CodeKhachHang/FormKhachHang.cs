@@ -40,11 +40,26 @@ namespace QuanLyBaoHiemNhanTho
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Them frm = new Them();  
-            frm.Show();
-            loadData();
+            LayoutMdi(MdiLayout.Cascade);
+            Them f = new Them();
+            f.MdiParent = this.MdiParent;
+            f.Dock = DockStyle.Fill;
+            f.ShowInTaskbar = false;
+            f.BackColor = Color.White;
+            f.FormBorderStyle = FormBorderStyle.None;
 
+            EventHandler formDisposedHandler = null;
+            formDisposedHandler = (sender, e) =>
+            {
+                // Thực hiện loadData() sau khi form đã bị giải phóng
+                loadData();
+
+                // Hủy đăng ký sự kiện FormDisposed để tránh xảy ra nhiều lần
+                f.Disposed -= formDisposedHandler;
+            };
+
+            f.Disposed += formDisposedHandler;
+            f.Show();
         }
 
         private void dtgv_nhanVien_SelectionChanged(object sender, EventArgs e)
@@ -61,18 +76,18 @@ namespace QuanLyBaoHiemNhanTho
             DataGridViewRow row = dtgv_nhanVien.Rows[rowIndex];
 
             if (row != null)
-            {           
-                
+            {
+
                 string id = row.Cells["ID"].Value.ToString();
                 List<HopDong> dsHD = khDB.dsHDisKH(id);
-                if(dsHD.Count > 0)
+                if (dsHD.Count > 0)
                 {
                     DialogResult result = MessageBox.Show("Khách đã có hợp đồng, bạn muốn xóa các hợp đồng liên quan không", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     // Kiểm tra phản hồi từ người dùng
                     if (result == DialogResult.Yes)
                     {
-                        foreach(HopDong d in dsHD)
+                        foreach (HopDong d in dsHD)
                         {
                             khDB.deleteHopDong(d.Id);
                             MessageBox.Show("Bạn đã xóa hết những hợp đồng có khách hàng này.");
@@ -101,9 +116,27 @@ namespace QuanLyBaoHiemNhanTho
                 string id = row.Cells["ID"].Value.ToString();
                 KhachHang kh = new KhachHang();
                 kh = khDB.findKhachHangID(id);
-                Sua frm = new Sua(kh);
-                frm.Show();
-                loadData();
+
+                LayoutMdi(MdiLayout.Cascade);
+                Sua f = new Sua(kh);
+                f.MdiParent = this.MdiParent;
+                f.Dock = DockStyle.Fill;
+                f.ShowInTaskbar = false;
+                f.BackColor = Color.White;
+                f.FormBorderStyle = FormBorderStyle.None;
+
+                EventHandler formDisposedHandler = null;
+                formDisposedHandler = (sender, e) =>
+                {
+                    // Thực hiện loadData() sau khi form đã bị giải phóng
+                    loadData();
+
+                    // Hủy đăng ký sự kiện FormDisposed để tránh xảy ra nhiều lần
+                    f.Disposed -= formDisposedHandler;
+                };
+
+                f.Disposed += formDisposedHandler;
+                f.Show();
             }
         }
 

@@ -26,7 +26,7 @@ namespace QuanLyBaoHiemNhanTho
                 txt_maKH.Text = kh.Id;
                 txt_tenKH.Text = kh.HoTen;
                 txt_CCCD.Text = kh.CCCD;
-                txt_email.Text  =kh.Email;
+                txt_email.Text = kh.Email;
                 txt_SDT.Text = kh.SDT;
                 cbb_gioiTinh.SelectedItem = kh.GioiTinh.ToString();
                 txt_quocTich.Text = kh.QuocTich;
@@ -40,10 +40,14 @@ namespace QuanLyBaoHiemNhanTho
             txt_maKH.Enabled = false;
         }
 
+        public Sua(Models.KhachHang kh)
+        {
+        }
+
         private void btn_suaKH_Click(object sender, EventArgs e)
         {
             DiaChi diaChi = new DiaChi(txt_soNha.Text, txt_soDuong.Text, txt_phuongXa.Text, txt_quanHuyen.Text, txt_tinhThanh.Text); ;
-            KhachHang kh = new KhachHang(txt_maKH.Text, txt_tenKH.Text, txt_CCCD.Text,txt_SDT.Text, txt_email.Text, cbb_gioiTinh.Text, txt_quocTich.Text, txt_ngay.Value.Date, diaChi);
+            KhachHang kh = new KhachHang(txt_maKH.Text, txt_tenKH.Text, txt_CCCD.Text, txt_SDT.Text, txt_email.Text, cbb_gioiTinh.Text, txt_quocTich.Text, txt_ngay.Value.Date, diaChi);
             List<HopDong> lsHD = khDB.dsHDisKH(txt_maKH.Text);
             if (lsHD != null)
             {
@@ -51,10 +55,13 @@ namespace QuanLyBaoHiemNhanTho
                     khDB.updateOneKHinHD(h.Id, kh);
             }
             khDB.updateKhachHang(txt_maKH.Text, kh);
-            this.Close();
-            Program.mainKH.loadData();
-            Program.mainKH.Show();
+            this.Dispose();
 
+        }
+
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
