@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             menuStrip1 = new MenuStrip();
             smiHoSo = new ToolStripMenuItem();
+            smiKhachHang = new ToolStripMenuItem();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -40,10 +41,10 @@
             menuStrip1.AutoSize = false;
             menuStrip1.BackColor = Color.White;
             menuStrip1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { smiHoSo, smiKhachHang });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(884, 35);
+            menuStrip1.Size = new Size(1064, 35);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -55,6 +56,12 @@
             smiHoSo.Name = "smiHoSo";
             smiHoSo.Size = new Size(55, 31);
             smiHoSo.Text = "Hồ sơ";
+            // 
+            // smiKhachHang
+            // 
+            smiKhachHang.Name = "smiKhachHang";
+            smiKhachHang.Size = new Size(82, 31);
+            smiKhachHang.Text = "Khách hàng";
             // 
             // kryptonPalette1
             // 
@@ -79,7 +86,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 255);
-            ClientSize = new Size(884, 561);
+            ClientSize = new Size(1064, 681);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
@@ -96,5 +103,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem smiHoSo;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private ToolStripMenuItem smiKhachHang;
     }
 }

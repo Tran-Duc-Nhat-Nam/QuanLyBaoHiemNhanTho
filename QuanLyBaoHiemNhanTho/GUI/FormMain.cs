@@ -23,7 +23,28 @@ namespace QuanLyBaoHiemNhanTho.GUI
             this.nv = nv;
             this.FormClosed += FormMain_FormClosed;
 
+            FormHoSo f = new FormHoSo(nv);
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.ShowInTaskbar = false;
+            f.BackColor = Color.White;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Show();
+
             smiHoSo.Click += SmiHoSo_Click;
+            smiKhachHang.Click += SmiKhachHang_Click;
+        }
+
+        private void SmiKhachHang_Click(object? sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+            FormKhachHang f = new FormKhachHang();
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.ShowInTaskbar = false;
+            f.BackColor = Color.White;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Show();
         }
 
         private void FormMain_FormClosed(object? sender, FormClosedEventArgs e)
@@ -33,6 +54,7 @@ namespace QuanLyBaoHiemNhanTho.GUI
 
         private void SmiHoSo_Click(object? sender, EventArgs e)
         {
+            LayoutMdi(MdiLayout.Cascade);
             FormHoSo f = new FormHoSo(nv);
             f.MdiParent = this;
             f.Dock = DockStyle.Fill;

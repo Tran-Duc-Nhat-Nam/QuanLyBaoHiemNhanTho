@@ -8,6 +8,8 @@ namespace QuanLyBaoHiemNhanTho
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        public static Them them = null;
+        public static FormKhachHang mainKH = null;
         public static FormDangNhap formDangNhap;
         public static FormMain formMain;
         [STAThread]
@@ -17,6 +19,8 @@ namespace QuanLyBaoHiemNhanTho
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             formDangNhap = new FormDangNhap();
+            them = new Them();
+            mainKH = new FormKhachHang();
             Application.Run(formDangNhap);
         }
 
