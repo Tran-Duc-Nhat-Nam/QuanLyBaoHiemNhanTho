@@ -31,7 +31,7 @@ namespace QuanLyBaoHiemNhanTho.GUI
 
         public void BtnDangNhap_Click(object? sender, EventArgs e)
         {
-            NhanVien nv = new ServiceTaiKhoan().KiemTraTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text);
+            NhanVien nv = new ServiceNhanVien().KiemTraTaiKhoan(txtTaiKhoan.Text, txtMatKhau.Text);
 
             if (nv != null)
             {

@@ -65,7 +65,7 @@ namespace QuanLyBaoHiemNhanTho.GUI
             f.Show();
             this.Visible = false;
         }
-        ServiceNhanVien srNV = new ServiceNhanVien();
+        CodeNhanVien.Controler.ServiceNhanVien srNV = new CodeNhanVien.Controler.ServiceNhanVien();
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
 

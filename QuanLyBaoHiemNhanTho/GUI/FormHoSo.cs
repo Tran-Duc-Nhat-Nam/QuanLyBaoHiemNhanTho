@@ -79,7 +79,7 @@ namespace QuanLyBaoHiemNhanTho.GUI
                 nv.SDT = txtSDT.Text;
                 nv.MatKhau = txtMatKhau.Text;
 
-                new ServiceTaiKhoan().CapNhatTaiKhoan(nv);
+                new ServiceNhanVien().CapNhatTaiKhoan(nv);
 
                 txtHoTen.ReadOnly = true;
                 txtCCCD.ReadOnly = true;

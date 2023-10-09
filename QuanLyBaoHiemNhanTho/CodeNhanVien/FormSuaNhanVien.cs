@@ -41,7 +41,7 @@ namespace QuanLyBaoHiemNhanTho.GUI
             }
             txt_manv.Enabled = false;
         }
-        ServiceNhanVien srNV = new ServiceNhanVien();
+        CodeNhanVien.Controler.ServiceNhanVien srNV = new CodeNhanVien.Controler.ServiceNhanVien();
         private void button3_Click(object sender, EventArgs e)
         {
 

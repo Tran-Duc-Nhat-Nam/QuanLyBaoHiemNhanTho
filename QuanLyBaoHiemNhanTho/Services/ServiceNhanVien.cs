@@ -8,8 +8,13 @@ using QuanLyBaoHiemNhanTho.Models;
 
 namespace QuanLyBaoHiemNhanTho.Services
 {
-    public class ServiceTaiKhoan : ServiceBHNT
+    public class ServiceNhanVien : ServiceBHNT
     {
+        public List<NhanVien> XemNhanVien()
+        {
+            return GetCollection<NhanVien>("NhanVien").Find(_ => true).ToList();
+        }
+
         public NhanVien? KiemTraTaiKhoan(string id, string mk)
         {
             IAsyncCursor<NhanVien> result = GetCollection<NhanVien>("NhanVien")

@@ -33,8 +33,20 @@ namespace QuanLyBaoHiemNhanTho.GUI
 
             smiHoSo.Click += SmiHoSo_Click;
             smiKhachHang.Click += SmiKhachHang_Click;
-            smiThongKe.Click += SmiThongKe_Click;
             smiNhanVien.Click += SmiNhanVien_Click;
+            smiHopDong.Click += SmiHopDong_Click;
+        }
+
+        private void SmiHopDong_Click(object? sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+            FormHopDong f = new FormHopDong(nv);
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.ShowInTaskbar = false;
+            f.BackColor = Color.White;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Show();
         }
 
         private void SmiNhanVien_Click(object? sender, EventArgs e)

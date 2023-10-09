@@ -12,7 +12,6 @@ namespace QuanLyBaoHiemNhanTho.Models
     {
         [BsonId]
         public string _id { get; set; }
-        public string MaHD { get; set; }
         public LoaiHD LoaiHD { get; set; }
         public DateTime NgayLapHD { get; set; }
         public DateTime NgayHetHan { get; set; }
